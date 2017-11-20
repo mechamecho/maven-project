@@ -1,3 +1,4 @@
+//this is the first example for pipeline as code
 pipeline {
     agent any
     stages{
