@@ -1,16 +1,18 @@
 pipeline {
     agent any
     stages{
-        stage('Build'){
+        stage('Initialize'){
             steps {
-                echo 'sh not working..'
+                sh '''
+                    echo "PATH=${PATH}"
+                    echo "M2_HOME=${M2_HOME}"
+                '''
             }
             
-            post {
-                success {
-                    echo 'Now Archiving...'
-                    archiveArtifacts artifacts: '**/target/*.war'
-                }
+        }
+        stage('Build'){
+            steps{
+                echo 'Hello World!'
             }
         }
     }
