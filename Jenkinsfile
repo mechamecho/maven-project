@@ -3,8 +3,9 @@ pipeline {
     stages{
         stage('Build'){
             steps {
-                sh 'echo hello there'
+                echo 'sh not working..'
             }
+            
             post {
                 success {
                     echo 'Now Archiving...'
